@@ -36,7 +36,7 @@ def restore(victim_ip, victim_mac, gateway_ip, gateway_mac):
     
     
 def check_permission():
-    if platform.system() is not 'Windows':
+    if platform.system() != 'Windows':
         if os.geteuid() != 0:
             Logger.permission_denied
             exit()
